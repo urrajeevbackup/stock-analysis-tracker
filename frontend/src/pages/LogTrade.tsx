@@ -1,8 +1,1 @@
-export default function LogTrade() {
-  return (
-    <section className="rounded-xl border bg-white p-6 shadow-sm">
-      <h1 className="mb-2 text-2xl font-semibold">LogTrade</h1>
-      <p className="text-slate-600">Placeholder content for LogTrade page.</p>
-    </section>
-  );
-}
+export default function LogTrade(){return <section className='space-y-4'><h1 className='text-2xl font-semibold'>Log Trade</h1><div className='rounded-xl border bg-white p-4'>Trade form foundation.</div></section>}

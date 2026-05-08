@@ -1,8 +1,1 @@
-export default function Reports() {
-  return (
-    <section className="rounded-xl border bg-white p-6 shadow-sm">
-      <h1 className="mb-2 text-2xl font-semibold">Reports</h1>
-      <p className="text-slate-600">Placeholder content for Reports page.</p>
-    </section>
-  );
-}
+export default function Reports(){return <section className='space-y-4'><h1 className='text-2xl font-semibold'>Reports</h1><div className='rounded-xl border bg-white p-4'>Filters, KPI cards, Recharts placeholder and trade breakdown table.</div></section>}
