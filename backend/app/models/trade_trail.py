@@ -1,4 +1,5 @@
 from sqlalchemy import Column, DateTime, Float, ForeignKey, Integer, Text, func
+from sqlalchemy.orm import relationship
 
 from app.core.database import Base
 
@@ -14,3 +15,5 @@ class TradeTrail(Base):
     new_target_price = Column(Float, nullable=True)
     notes = Column(Text, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+    trade = relationship("Trade", back_populates="trails")

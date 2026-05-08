@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Date, DateTime, Float, ForeignKey, Integer, String, Text, func
+from sqlalchemy.orm import relationship
 
 from app.core.database import Base
 
@@ -19,3 +20,6 @@ class Trade(Base):
     status = Column(String(30), nullable=False)
     notes = Column(Text, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+    user = relationship("User", back_populates="trades")
+    trails = relationship("TradeTrail", back_populates="trade", cascade="all, delete-orphan")
