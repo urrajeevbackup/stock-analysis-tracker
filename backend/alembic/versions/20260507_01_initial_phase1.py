@@ -1,10 +1,6 @@
-"""initial phase1 schema
 
-Revision ID: 20260507_01
-Revises:
-Create Date: 2026-05-07
-"""
 from datetime import date
+
 
 from alembic import op
 import sqlalchemy as sa
@@ -86,6 +82,7 @@ def upgrade() -> None:
         sa.Column("file_name", sa.String(length=255), nullable=False),
         sa.Column("created_at", sa.DateTime(timezone=True), server_default=sa.func.now(), nullable=False),
     )
+
     op.bulk_insert(
         sa.table(
             "users",
@@ -187,6 +184,8 @@ def upgrade() -> None:
             }
         ],
     )
+
+
 
 
 def downgrade() -> None:
