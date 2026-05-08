@@ -42,3 +42,19 @@ It validates:
 - Health check endpoint
 - Seeded list endpoints (`analysis`, `trades`, `trade-trails`)
 - Create + fetch flow for a sample trade
+
+## Troubleshooting: `GET /api/v1/analysis/` returns 500
+
+If you see an error like:
+
+- `RuntimeError: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods`
+
+your MySQL user is using an auth plugin that requires `cryptography` in the Python environment.
+
+Fix:
+
+```bash
+pip install cryptography
+```
+
+Then restart the FastAPI server.
