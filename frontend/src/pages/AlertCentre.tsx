@@ -1,8 +1,1 @@
-export default function AlertCentre() {
-  return (
-    <section className="rounded-xl border bg-white p-6 shadow-sm">
-      <h1 className="mb-2 text-2xl font-semibold">AlertCentre</h1>
-      <p className="text-slate-600">Placeholder content for AlertCentre page.</p>
-    </section>
-  );
-}
+export default function AlertCentre(){return <section className='space-y-3'><h1 className='text-2xl font-semibold'>Alert Centre</h1><p className='text-slate-600'>Price alert engine will be added after live market data integration.</p></section>}

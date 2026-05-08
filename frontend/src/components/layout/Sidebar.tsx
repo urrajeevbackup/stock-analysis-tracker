@@ -1,0 +1,2 @@
+import { NavLink } from 'react-router-dom'; const items=[['/','Dashboard'],['/analysis','Analysis'],['/log-trade','Log Trade'],['/live-monitor','Live Monitor'],['/alert-centre','Alert Centre'],['/reports','Reports']];
+export default function Sidebar(){return <aside className='w-64 bg-white border-r p-4 space-y-2'>{items.map(([to,l])=><NavLink key={to} to={to} className='block p-2 rounded hover:bg-slate-100'>{l}</NavLink>)}</aside>}

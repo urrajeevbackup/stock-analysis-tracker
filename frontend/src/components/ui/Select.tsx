@@ -1,0 +1,1 @@
+import type { SelectHTMLAttributes } from 'react'; export default function Select(p:SelectHTMLAttributes<HTMLSelectElement>){return <select {...p} className={`w-full border rounded-lg p-2 ${p.className??''}`}/>}

@@ -1,0 +1,1 @@
+import type { TextareaHTMLAttributes } from 'react'; export default function Textarea(p:TextareaHTMLAttributes<HTMLTextAreaElement>){return <textarea {...p} className={`w-full border rounded-lg p-2 ${p.className??''}`}/>}
