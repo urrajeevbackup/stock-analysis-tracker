@@ -58,3 +58,28 @@ pip install cryptography
 ```
 
 Then restart the FastAPI server.
+
+
+## Troubleshooting: `Database connection failed: OperationalError`
+
+This means FastAPI could not connect to the configured database server.
+
+1. Confirm your database URL/environment:
+
+```bash
+cd backend
+python - <<'PY'
+from app.core.config import settings
+print(settings.resolved_database_url)
+PY
+```
+
+2. If you do not have MySQL running locally, start MySQL or use SQLite for local development:
+
+```bash
+export DATABASE_URL="sqlite:///./stock_tracker.db"
+alembic upgrade head
+uvicorn app.main:app --reload
+```
+
+3. If using MySQL, verify DB/user exists and credentials match `DB_*` vars (or `DATABASE_URL`).
